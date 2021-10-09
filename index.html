@@ -1,0 +1,40 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Конструктор таблиц</title>
+</head>
+<body>
+    <p>Создаем таблицы вводя количество столбцов и количество строк.</p>
+    <p>border-style:
+        <select id="borderStyle" OnChange = "countNumberLines()">
+            <option value="dotted">dotted</option>
+            <option value="dashed">dashed</option>
+            <option value="solid">solid</option>
+            <option value="double">double</option>
+            <option value="groove">groove</option>
+            <option value="ridge">ridge</option>
+            <option value="inset">inset</option>
+            <option value="outset">outset</option>
+        </select>
+    </p>
+
+    <p>
+        <label>Кол-во строк</label>
+        <input type="range" id="numberOfLines" min="1" max="15" step="1" value="5">
+        <textarea id="outputOfLines" cols="1" rows="1"></textarea>
+        
+        <label>Кол-во столбцов</label>
+        <input type="range" id="numberOfColumns" min="1" max="15" step="1" value="3">
+        <textarea id="outputOfColumns" cols="1" rows="1"></textarea>
+    </p>
+
+    <table id='table'></table>
+
+    <textarea id="samCode" cols="100" rows="20"></textarea>
+
+    <script src="script.js"></script>
+</body>
+</html>
